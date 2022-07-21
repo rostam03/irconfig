@@ -3,22 +3,33 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  
-  default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-  enhanced-mode: fake-ip # or redir-host (not recommended)
-  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
-  # use-hosts: true # lookup hosts and return IP record
+  ipv6: false
   nameserver:
-    - 1.1.1.1 
-    - 8.8.8.8
-    - tls://8.8.8.8:853
-    - https://1.0.0.1/dns-query
+    - https://dns.aa.net.uk/dns-query
+    - https://dns.arapurayil.com/dns-query
+    - https://dns1.ryan-palmer.com/dns-query
+    - https://doh-2.seby.io:443/dns-query
+    - https://dns.nextdns.io/dnscrypt-proxy
+    - https://doh.libredns.gr/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.dnshome.de/dns-query
+    - https://doh.pi-dns.com/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dnses.alekberg.net/dns-query
+    - tls://dns.quad9.net:853
+    - tls://cloudflare-dns.com:853
+    - tls://dns.google:853
+    - tls://dot.xfinity.com:853
+    - tls://dns.aa.net.uk:853
+    - tls://dns.quad9.net:853
+    - tls://dot.libredns.gr:853
+    - tls://185.253.154.66:4343
+    - tls://116.202.176.26:853
 proxies:
   - {name: IT1, server: 84.33.193.79, port: 18760, type: ss, cipher: aes-256-gcm, password: hg49$WH8943g3, udp: true}
   - {name: IT2, server: 158.58.173.240, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
