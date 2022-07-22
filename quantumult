@@ -1,0 +1,112 @@
+[SERVER]
+IT1 = shadowsocks, 84.33.193.79, 18760, aes-256-gcm, "hg49$WH8943g3", group=SSProvider
+IT2 = shadowsocks, 158.58.173.240, 812, chacha20-ietf-poly1305, "G!yBwPWH3Vao", group=SSProvider
+🇩🇪 DE1 = shadowsocks, 93.186.201.158, 810, chacha20-ietf-poly1305, "G!yBwPWH3Vao", group=SSProvider
+🇩🇪 DE2 = shadowsocks, 93.186.201.158, 809, chacha20-ietf-poly1305, "G!yBwPWH3Vao", group=SSProvider
+🇩🇪 DE3 = shadowsocks, 93.186.201.124, 802, chacha20-ietf-poly1305, "G!yBwPWH3Vao", group=SSProvider
+GB1 = shadowsocks, 82.145.41.125, 8080, aes-256-gcm, "KixLvKzwjekG00rm", group=SSProvider
+CA1 = shadowsocks, 134.195.196.231, 7001, aes-256-gcm, "RexnBgU7EV5ADxG", group=SSProvider
+🇺🇲 US1 = shadowsocks, 38.91.100.207, 3389, aes-256-gcm, "Y6R9pAtvxxzmGC", group=SSProvider
+🇺🇲 US2 = shadowsocks, 92.38.169.196, 826, chacha20-ietf-poly1305, "sF43Xt2gONqcgFX563", group=SSProvider
+CA2 = shadowsocks, 51.161.118.38, 812, chacha20-ietf-poly1305, "G!yBwPWH3Vao", group=SSProvider
+🇷🇺 RU1 = shadowsocks, 194.34.239.105, 18760, chacha20-ietf-poly1305, "hg49$WH8943g3", group=SSProvider
+
+[SOURCE]
+
+[BACKUP-SERVER]
+
+[SUSPEND-SSID]
+
+[POLICY]
+8J+QnyBQUklNQVJZIDogc3RhdGljLCDimbvvuI8gQXV0byBBbGwK4pm777iPIEF1dG8gQWxsCvCfh6nwn4eqREUgQXV0bwrwn4es8J+Hp0dCIEF1dG8K8J+HuvCfh7hVUyBBdXRvCvCfh6jwn4emQ0EgQXV0bwrwn4eu8J+HuUlUIEF1dG8K8J+MjSBNQU5VQUwK
+4pm777iPIEF1dG8gQWxsIDogYXV0bwpJVDEKSVQyCvCfh6nwn4eqIERFMQrwn4ep8J+HqiBERTIK8J+HqfCfh6ogREUzCkdCMQpDQTEK8J+HuvCfh7IgVVMxCvCfh7rwn4eyIFVTMgpDQTIK8J+Ht/Cfh7ogUlUxCg==
+8J+MjSBNQU5VQUwgOiBzdGF0aWMsIElUMQpJVDEKSVQyCvCfh6nwn4eqIERFMQrwn4ep8J+HqiBERTIK8J+HqfCfh6ogREUzCkdCMQpDQTEK8J+HuvCfh7IgVVMxCvCfh7rwn4eyIFVTMgpDQTIK8J+Ht/Cfh7ogUlUxCg==
+QlAgOiBzdGF0aWMsIERJUkVDVApESVJFQ1QK4pm777iPIEF1dG8gQWxsCg==
+QURCTE9DSyA6IHN0YXRpYywgUkVKRUNUClJFSkVDVApESVJFQ1QK
+8J+HqfCfh6pERSBBdXRvIDogYXV0bwrwn4ep8J+HqiBERTEK8J+HqfCfh6ogREUyCvCfh6nwn4eqIERFMwo=
+8J+HrPCfh6dHQiBBdXRvIDogc3RhdGljLCBHQjEKR0IxCg==
+8J+HuvCfh7hVUyBBdXRvIDogYXV0bwrwn4e68J+HsiBVUzEK8J+HuvCfh7IgVVMyCg==
+8J+HqPCfh6ZDQSBBdXRvIDogYXV0bwpDQTEKQ0EyCg==
+8J+HrvCfh7lJVCBBdXRvIDogYXV0bwpJVDEKSVQyCg==
+
+[DNS]
+76.76.2.2
+76.76.10.2
+
+[REWRITE]
+
+[URL-REJECTION]
+
+[TCP]
+DOMAIN-SUFFIX,ip6-localhost,BP
+DOMAIN-SUFFIX,ip6-loopback,BP
+DOMAIN-SUFFIX,lan,BP
+DOMAIN-SUFFIX,local,BP
+DOMAIN-SUFFIX,localhost,BP
+IP-CIDR,10.0.0.0/8,BP,no-resolve
+IP-CIDR,100.64.0.0/10,BP,no-resolve
+IP-CIDR,127.0.0.0/8,BP,no-resolve
+IP-CIDR,172.16.0.0/12,BP,no-resolve
+IP-CIDR,192.168.0.0/16,BP,no-resolve
+IP-CIDR,198.18.0.0/16,BP,no-resolve
+DOMAIN,router.asus.com,BP
+DOMAIN-SUFFIX,miwifi.com,BP
+DOMAIN-SUFFIX,my.router,BP
+DOMAIN-SUFFIX,p.to,BP
+DOMAIN-SUFFIX,router.ctc,BP
+DOMAIN-SUFFIX,routerlogin.com,BP
+DOMAIN-SUFFIX,zte.home,BP
+DOMAIN-SUFFIX,sanjesh.org,BP
+DOMAIN-SUFFIX,blubank.com,BP
+DOMAIN-SUFFIX,googleapis.com,BP
+DOMAIN-SUFFIX,gstatic.com,BP
+DOMAIN-SUFFIX,ad-push.ir,ADBLOCK
+DOMAIN-SUFFIX,adad.ir,ADBLOCK
+DOMAIN-SUFFIX,ipopup.ir,ADBLOCK
+DOMAIN-SUFFIX,irpopup.ir,ADBLOCK
+DOMAIN-SUFFIX,metrix.ir,ADBLOCK
+DOMAIN-SUFFIX,p30rank.ir,ADBLOCK
+DOMAIN-SUFFIX,persianrank.ir,ADBLOCK
+DOMAIN-SUFFIX,persianstat.ir,ADBLOCK
+DOMAIN-SUFFIX,popfa.ir,ADBLOCK
+DOMAIN-SUFFIX,popmaster.ir,ADBLOCK
+DOMAIN-SUFFIX,popupads.ir,ADBLOCK
+DOMAIN-SUFFIX,popupaval.ir,ADBLOCK
+DOMAIN-SUFFIX,popupplus.ir,ADBLOCK
+DOMAIN-SUFFIX,clix.ir,ADBLOCK
+DOMAIN-SUFFIX,tapsell.ir,ADBLOCK
+DOMAIN-SUFFIX,utop.ir,ADBLOCK
+DOMAIN-SUFFIX,ir,BP
+DOMAIN-SUFFIX,tavoos.net,ADBLOCK
+DOMAIN-SUFFIX,toppopup.com,ADBLOCK
+DOMAIN-SUFFIX,yektanet.com,ADBLOCK
+DOMAIN-SUFFIX,zarpop.com,ADBLOCK
+DOMAIN-SUFFIX,clickyab.com,ADBLOCK
+DOMAIN-SUFFIX,popland.info,ADBLOCK
+DOMAIN-SUFFIX,affstat.adro.co,ADBLOCK
+DOMAIN-SUFFIX,yektanet.com,ADBLOCK
+DOMAIN-SUFFIX,clickyab.com,ADBLOCK
+DOMAIN-SUFFIX,deema.agency,ADBLOCK
+DOMAIN-SUFFIX,kaprila.com,ADBLOCK
+DOMAIN-SUFFIX,magnetadservices.com,ADBLOCK
+DOMAIN-SUFFIX,mediaad.org,ADBLOCK
+DOMAIN-SUFFIX,najva.com,ADBLOCK
+DOMAIN-SUFFIX,netbina.com,ADBLOCK
+DOMAIN-SUFFIX,netbina.net,ADBLOCK
+DOMAIN-SUFFIX,persianstat.com,ADBLOCK
+DOMAIN-SUFFIX,poparya.com,ADBLOCK
+DOMAIN-SUFFIX,popupha.com,ADBLOCK
+DOMAIN-SUFFIX,popupme.net,ADBLOCK
+DOMAIN-SUFFIX,sabavision.com,ADBLOCK
+DOMAIN-SUFFIX,sanjagh.com,ADBLOCK
+GEOIP,IR,BP
+FINAL,🐟 PRIMARY
+
+[GLOBAL]
+
+[HOST]
+
+[STATE]
+STATE,AUTO
+
+[MITM]
