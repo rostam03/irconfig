@@ -1,0 +1,178 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: IT1, server: 84.33.193.79, port: 18760, type: ss, cipher: aes-256-gcm, password: hg49$WH8943g3}
+  - {name: IT2, server: 158.58.173.240, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇩🇪 DE1, server: 93.186.201.158, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇩🇪 DE2, server: 93.186.201.158, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇩🇪 DE3, server: 93.186.201.124, port: 802, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: GB1, server: 82.145.41.125, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
+  - {name: CA1, server: 134.195.196.231, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
+  - {name: 🇺🇲 US1, server: 38.91.100.207, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇺🇲 US2, server: 92.38.169.196, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
+  - {name: CA2, server: 51.161.118.38, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇷🇺 RU1, server: 194.34.239.105, port: 18760, type: ss, cipher: chacha20-ietf-poly1305, password: hg49$WH8943g3}
+proxy-groups:
+  - name: 🐟 PRIMARY
+    type: select
+    proxies:
+      - ♻️ Auto All
+      - 🇩🇪DE Auto
+      - 🇬🇧GB Auto
+      - 🇺🇸US Auto
+      - 🇨🇦CA Auto
+      - 🇮🇹IT Auto
+      - 🌍 MANUAL
+  - name: ♻️ Auto All
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - IT1
+      - IT2
+      - 🇩🇪 DE1
+      - 🇩🇪 DE2
+      - 🇩🇪 DE3
+      - GB1
+      - CA1
+      - 🇺🇲 US1
+      - 🇺🇲 US2
+      - CA2
+      - 🇷🇺 RU1
+  - name: 🌍 MANUAL
+    type: select
+    proxies:
+      - IT1
+      - IT2
+      - 🇩🇪 DE1
+      - 🇩🇪 DE2
+      - 🇩🇪 DE3
+      - GB1
+      - CA1
+      - 🇺🇲 US1
+      - 🇺🇲 US2
+      - CA2
+      - 🇷🇺 RU1
+  - name: BP
+    type: select
+    proxies:
+      - DIRECT
+      - ♻️ Auto All
+  - name: ADBLOCK
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇩🇪DE Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇩🇪 DE1
+      - 🇩🇪 DE2
+      - 🇩🇪 DE3
+  - name: 🇬🇧GB Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - GB1
+  - name: 🇺🇸US Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇲 US1
+      - 🇺🇲 US2
+  - name: 🇨🇦CA Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - CA1
+      - CA2
+  - name: 🇮🇹IT Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - IT1
+      - IT2
+rules:
+ - DOMAIN-SUFFIX,ip6-localhost,BP
+ - DOMAIN-SUFFIX,ip6-loopback,BP
+ - DOMAIN-SUFFIX,lan,BP
+ - DOMAIN-SUFFIX,local,BP
+ - DOMAIN-SUFFIX,localhost,BP
+ - IP-CIDR,10.0.0.0/8,BP,no-resolve
+ - IP-CIDR,100.64.0.0/10,BP,no-resolve
+ - IP-CIDR,127.0.0.0/8,BP,no-resolve
+ - IP-CIDR,172.16.0.0/12,BP,no-resolve
+ - IP-CIDR,192.168.0.0/16,BP,no-resolve
+ - IP-CIDR,198.18.0.0/16,BP,no-resolve
+ - IP-CIDR6,::1/128,BP,no-resolve
+ - IP-CIDR6,fc00::/7,BP,no-resolve
+ - IP-CIDR6,fe80::/10,BP,no-resolve
+ - IP-CIDR6,fd00::/8,BP,no-resolve
+ - DOMAIN,router.asus.com,BP
+ - DOMAIN-SUFFIX,miwifi.com,BP
+ - DOMAIN-SUFFIX,my.router,BP
+ - DOMAIN-SUFFIX,p.to,BP
+ - DOMAIN-SUFFIX,router.ctc,BP
+ - DOMAIN-SUFFIX,routerlogin.com,BP
+ - DOMAIN-SUFFIX,zte.home,BP
+ - DOMAIN-SUFFIX,sanjesh.org,BP
+ - DOMAIN-SUFFIX,blubank.com,BP
+ - DOMAIN-SUFFIX,googleapis.com,BP
+ - DOMAIN-SUFFIX,gstatic.com,BP
+ - DOMAIN-SUFFIX,ad-push.ir,ADBLOCK
+ - DOMAIN-SUFFIX,adad.ir,ADBLOCK
+ - DOMAIN-SUFFIX,ipopup.ir,ADBLOCK
+ - DOMAIN-SUFFIX,irpopup.ir,ADBLOCK
+ - DOMAIN-SUFFIX,metrix.ir,ADBLOCK
+ - DOMAIN-SUFFIX,p30rank.ir,ADBLOCK
+ - DOMAIN-SUFFIX,persianrank.ir,ADBLOCK
+ - DOMAIN-SUFFIX,persianstat.ir,ADBLOCK
+ - DOMAIN-SUFFIX,popfa.ir,ADBLOCK
+ - DOMAIN-SUFFIX,popmaster.ir,ADBLOCK
+ - DOMAIN-SUFFIX,popupads.ir,ADBLOCK
+ - DOMAIN-SUFFIX,popupaval.ir,ADBLOCK
+ - DOMAIN-SUFFIX,popupplus.ir,ADBLOCK
+ - DOMAIN-SUFFIX,clix.ir,ADBLOCK
+ - DOMAIN-SUFFIX,tapsell.ir,ADBLOCK
+ - DOMAIN-SUFFIX,utop.ir,ADBLOCK
+ - DOMAIN-SUFFIX,ir,BP
+ - DOMAIN-SUFFIX,tavoos.net,ADBLOCK
+ - DOMAIN-SUFFIX,toppopup.com,ADBLOCK
+ - DOMAIN-SUFFIX,yektanet.com,ADBLOCK
+ - DOMAIN-SUFFIX,zarpop.com,ADBLOCK
+ - DOMAIN-SUFFIX,clickyab.com,ADBLOCK
+ - DOMAIN-SUFFIX,popland.info,ADBLOCK
+ - DOMAIN-SUFFIX,affstat.adro.co,ADBLOCK
+ - DOMAIN-SUFFIX,yektanet.com,ADBLOCK
+ - DOMAIN-SUFFIX,clickyab.com,ADBLOCK
+ - DOMAIN-SUFFIX,deema.agency,ADBLOCK
+ - DOMAIN-SUFFIX,kaprila.com,ADBLOCK
+ - DOMAIN-SUFFIX,magnetadservices.com,ADBLOCK
+ - DOMAIN-SUFFIX,mediaad.org,ADBLOCK
+ - DOMAIN-SUFFIX,najva.com,ADBLOCK
+ - DOMAIN-SUFFIX,netbina.com,ADBLOCK
+ - DOMAIN-SUFFIX,netbina.net,ADBLOCK
+ - DOMAIN-SUFFIX,persianstat.com,ADBLOCK
+ - DOMAIN-SUFFIX,poparya.com,ADBLOCK
+ - DOMAIN-SUFFIX,popupha.com,ADBLOCK
+ - DOMAIN-SUFFIX,popupme.net,ADBLOCK
+ - DOMAIN-SUFFIX,sabavision.com,ADBLOCK
+ - DOMAIN-SUFFIX,sanjagh.com,ADBLOCK
+ - GEOIP,IR,BP
+ - MATCH,🐟 PRIMARY
