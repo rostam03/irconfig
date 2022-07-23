@@ -4,6 +4,21 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  use-hosts: true
+  ipv6: false
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  listen: 127.0.0.1:6868
+  default-nameserver:
+    - 76.76.2.2
+    - 76.76.10.2
+  nameserver:
+    - https://freedns.controld.com/p2
+  fallback:
+    - 'https://1.0.0.1/dns-query#DNS'  # append the proxy adapter name or group name to the end of DNS URL with '#' prefix.
+    - 'tls://8.8.4.4:853#DNS'
 proxies:
   - {name: IT1, server: 84.33.193.79, port: 18760, type: ss, cipher: aes-256-gcm, password: hg49$WH8943g3}
   - {name: IT2, server: 158.58.173.240, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
