@@ -8,6 +8,8 @@ dns:
   enable: true
   ipv6: false
   nameserver:
+    - 76.76.2.2
+    - 76.76.10.2
     - https://freedns.controld.com/p2
     - tls://p2.freedns.controld.com:853
 proxies:
