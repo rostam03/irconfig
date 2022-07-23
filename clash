@@ -17,7 +17,7 @@ dns:
   nameserver:
     - https://freedns.controld.com/p2
   fallback:
-    - 'https://cloudflare-dns.com/dns-query#DNS'  # append the proxy adapter name or group name to the end of DNS URL with '#' prefix.
+    - '76.76.2.2#DNS'  # append the proxy adapter name or group name to the end of DNS URL with '#' prefix.
 proxies:
   - {name: IT1, server: 84.33.193.79, port: 18760, type: ss, cipher: aes-256-gcm, password: hg49$WH8943g3}
   - {name: IT2, server: 158.58.173.240, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
