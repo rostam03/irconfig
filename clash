@@ -15,8 +15,8 @@ dns:
     - 76.76.2.2
     - 76.76.10.2
   nameserver:
-    - https://freedns.controld.com/p2
     - 76.76.2.2
+    - 76.76.10.2
   fallback:
     - '76.76.2.2#DNS'  # append the proxy adapter name or group name to the end of DNS URL with '#' prefix.
 proxies:
