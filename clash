@@ -10,17 +10,32 @@ dns:
     - 76.76.2.2
     - 76.76.10.2
 proxies:
-  - {name: IT1, server: 84.33.193.79, port: 18760, type: ss, cipher: aes-256-gcm, password: hg49$WH8943g3}
-  - {name: IT2, server: 158.58.173.240, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇩🇪 DE1, server: 93.186.201.158, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇩🇪 DE2, server: 93.186.201.158, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇩🇪 DE3, server: 93.186.201.124, port: 802, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: GB1, server: 82.145.41.125, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
-  - {name: CA1, server: 134.195.196.231, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
-  - {name: 🇺🇲 US1, server: 38.91.100.207, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: 🇺🇲 US2, server: 92.38.169.196, port: 826, type: ss, cipher: chacha20-ietf-poly1305, password: sF43Xt2gONqcgFX563}
-  - {name: CA2, server: 51.161.118.38, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: 🇷🇺 RU1, server: 194.34.239.105, port: 18760, type: ss, cipher: chacha20-ietf-poly1305, password: hg49$WH8943g3}
+  - {name: ss_GB_1, server: 212.102.53.194, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: ss_IL_1, server: 185.162.125.91, port: 50004, type: ss, cipher: aes-256-cfb, password: !<str> 4415934295}
+  - {name: 🇺🇲 ss_US_1_P805, server: 162.251.61.47, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇺🇲 ss_US_2, server: 37.120.219.218, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇺🇲 ss_US_1_P800, server: 162.251.61.47, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: 🇸🇬 tro_SG_1, server: trojan2.udpgw.com, port: 443, type: trojan, password: a79da040-2e7c-11ed-91c2-1239d0255272}
+  - {name: 🇺🇲 vmess_US_3, server: usa-washington.lvuft.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-opts: {path: /ws, headers: {Host: usa-washington.lvuft.com}}}
+  - {name: 🇺🇲 vmess_US_4, server: vus4.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, servername: vus4.0bad.com, network: ws, ws-opts: {path: /chat, headers: {Host: vus4.0bad.com}}}
+  - {name: 🇩🇪 vmess_DE_1, server: vau1.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, servername: vau1.0bad.com, network: ws, ws-opts: {path: /chat, headers: {Host: vau1.0bad.com}}}
+  - {name: 🇺🇲 tro_US_434, server: youtube-bai-piao-wang-zhe-usa.98848.xyz, port: 17449, type: trojan, password: yBq0efi1j7}
+  - {name: 🇸🇬 tro_SG_342, server: trojan2.udpgw.com, port: 443, type: trojan, password: a79da040-2e7c-11ed-91c2-1239d0255272}
+  - {name: 🇩🇪 tro_DE_100, server: trojan-ctb-sg01.globalssh.xyz, port: 443, type: trojan, password: !<str> 123456}
+  - {name: 🇩🇪 vmess_DE_07, server: vau1.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, servername: vau1.0bad.com, network: ws, ws-opts: {path: /chat, headers: {Host: vau1.0bad.com}}}
+  - {name: 🇺🇲 vmess_US_427, server: gaio.miaoge110.cf, port: 443, type: vmess, uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /jcnf, headers: {Host: "%7B%22Host%22:%22gaio.miaoge110.cf%22%7D"}}}
+  - {name: 🇺🇲 vmess_US_430, server: 20.233.12.144, port: 443, type: vmess, uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇩🇪 tro_DE_126, server: trojan-ctb-sg01.globalssh.xyz, port: 443, type: trojan, password: !<str> 123456}
+  - {name: 🇩🇪 tro_DE_133, server: trojan-ctb-sg01.globalssh.xyz, port: 443, type: trojan, password: !<str> 123456}
+  - {name: 🇺🇲 vmess_US_58, server: arm.ptuu.gq, port: 443, type: vmess, uuid: 9821b817-5cb0-4af3-a3e3-7c137850935d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /123, headers: {Host: arm.ptuu.gq}}}
+  - {name: vmess_59, server: usamd.ptuu.gq, port: 443, type: vmess, uuid: 33653796-feef-43fd-e7cc-1adccd79b7c7, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /123, headers: {Host: usamd.ptuu.gq}}}
+  - {name: vmess_63, server: jpamd.fineyoo.cf, port: 443, type: vmess, uuid: 9bdac558-1d2b-425b-f0e7-445d38be025e, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /123, headers: {Host: jpamd.fineyoo.cf}}}
+  - {name: vmess_65, server: amdkr.ptuu.ml, port: 443, type: vmess, uuid: e2cdc305-dda7-465e-b675-ba0468d2a8b3, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /987, headers: {Host: amdkr.ptuu.ml}}}
+  - {name: vmess_66, server: sgamd.ptuu.tk, port: 443, type: vmess, uuid: 80f1e736-4b86-4e31-80d1-aac867666095, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /123, headers: {Host: sgamd.ptuu.tk}}}
+  - {name: vmess_67, server: eu.ptuu.tk, port: 443, type: vmess, uuid: 70d9bf20-3e6b-4cd3-ff28-b62567ff5a23, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ray, headers: {Host: eu.ptuu.tk}}}
+  - {name: 🇺🇲 vmess_US_75, server: 192.96.204.250, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, servername: usa-washington.lvuft.com, network: ws, ws-opts: {path: /ws, headers: {Host: usa-washington.lvuft.com}}}
+  - {name: 🇺🇲 vmess_US_76, server: usa-washington.lvuft.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, network: ws, ws-opts: {path: /ws, headers: {Host: usa-washington.lvuft.com}}}
+  - {name: tro_UA_428, server: ce.rutracker-cn.com, port: 443, type: trojan, password: 5y8y3CwxRVYhyfSY}
 proxy-groups:
   - name: 🐟 PRIMARY
     type: select
@@ -29,8 +44,6 @@ proxy-groups:
       - 🇩🇪DE Auto
       - 🇬🇧GB Auto
       - 🇺🇸US Auto
-      - 🇨🇦CA Auto
-      - 🇮🇹IT Auto
       - 🌍 MANUAL
   - name: ♻️ Auto All
     type: url-test
@@ -38,31 +51,61 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - IT1
-      - IT2
-      - 🇩🇪 DE1
-      - 🇩🇪 DE2
-      - 🇩🇪 DE3
-      - GB1
-      - CA1
-      - 🇺🇲 US1
-      - 🇺🇲 US2
-      - CA2
-      - 🇷🇺 RU1
+      - ss_GB_1
+      - ss_IL_1
+      - 🇺🇲 ss_US_1_P805
+      - 🇺🇲 ss_US_2
+      - 🇺🇲 ss_US_1_P800
+      - 🇸🇬 tro_SG_1
+      - 🇺🇲 vmess_US_3
+      - 🇺🇲 vmess_US_4
+      - 🇩🇪 vmess_DE_1
+      - 🇺🇲 tro_US_434
+      - 🇸🇬 tro_SG_342
+      - 🇩🇪 tro_DE_100
+      - 🇩🇪 vmess_DE_07
+      - 🇺🇲 vmess_US_427
+      - 🇺🇲 vmess_US_430
+      - 🇩🇪 tro_DE_126
+      - 🇩🇪 tro_DE_133
+      - 🇺🇲 vmess_US_58
+      - vmess_59
+      - vmess_63
+      - vmess_65
+      - vmess_66
+      - vmess_67
+      - 🇺🇲 vmess_US_75
+      - 🇺🇲 vmess_US_76
+      - tro_UA_428
   - name: 🌍 MANUAL
     type: select
     proxies:
-      - IT1
-      - IT2
-      - 🇩🇪 DE1
-      - 🇩🇪 DE2
-      - 🇩🇪 DE3
-      - GB1
-      - CA1
-      - 🇺🇲 US1
-      - 🇺🇲 US2
-      - CA2
-      - 🇷🇺 RU1
+      - ss_GB_1
+      - ss_IL_1
+      - 🇺🇲 ss_US_1_P805
+      - 🇺🇲 ss_US_2
+      - 🇺🇲 ss_US_1_P800
+      - 🇸🇬 tro_SG_1
+      - 🇺🇲 vmess_US_3
+      - 🇺🇲 vmess_US_4
+      - 🇩🇪 vmess_DE_1
+      - 🇺🇲 tro_US_434
+      - 🇸🇬 tro_SG_342
+      - 🇩🇪 tro_DE_100
+      - 🇩🇪 vmess_DE_07
+      - 🇺🇲 vmess_US_427
+      - 🇺🇲 vmess_US_430
+      - 🇩🇪 tro_DE_126
+      - 🇩🇪 tro_DE_133
+      - 🇺🇲 vmess_US_58
+      - vmess_59
+      - vmess_63
+      - vmess_65
+      - vmess_66
+      - vmess_67
+      - 🇺🇲 vmess_US_75
+      - 🇺🇲 vmess_US_76
+      - tro_UA_428
   - name: BP
     type: select
     proxies:
@@ -79,40 +122,35 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 DE1
-      - 🇩🇪 DE2
-      - 🇩🇪 DE3
+      - 🇩🇪 vmess_DE_1
+      - 🇩🇪 tro_DE_100
+      - 🇩🇪 vmess_DE_07
+      - 🇩🇪 tro_DE_126
+      - 🇩🇪 tro_DE_133
   - name: 🇬🇧GB Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - GB1
+      - ss_GB_1
   - name: 🇺🇸US Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇲 US1
-      - 🇺🇲 US2
-  - name: 🇨🇦CA Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - CA1
-      - CA2
-  - name: 🇮🇹IT Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - IT1
-      - IT2
+      - 🇺🇲 ss_US_1_P805
+      - 🇺🇲 ss_US_2
+      - 🇺🇲 ss_US_1_P800
+      - 🇺🇲 vmess_US_3
+      - 🇺🇲 vmess_US_4
+      - 🇺🇲 tro_US_434
+      - 🇺🇲 vmess_US_427
+      - 🇺🇲 vmess_US_430
+      - 🇺🇲 vmess_US_58
+      - 🇺🇲 vmess_US_75
+      - 🇺🇲 vmess_US_76
 rules:
  - DOMAIN-SUFFIX,ip6-localhost,BP
  - DOMAIN-SUFFIX,ip6-loopback,BP
@@ -138,8 +176,6 @@ rules:
  - DOMAIN-SUFFIX,zte.home,BP
  - DOMAIN-SUFFIX,sanjesh.org,BP
  - DOMAIN-SUFFIX,blubank.com,BP
- - DOMAIN-SUFFIX,googleapis.com,BP
- - DOMAIN-SUFFIX,gstatic.com,BP
  - DOMAIN-SUFFIX,ad-push.ir,ADBLOCK
  - DOMAIN-SUFFIX,adad.ir,ADBLOCK
  - DOMAIN-SUFFIX,ipopup.ir,ADBLOCK
